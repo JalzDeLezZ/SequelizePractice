@@ -7,7 +7,7 @@ const User = require('./database/models/User')
 const PORT = process.env.PORT || 3000;
 
 //ROUTES
-app.get('/', (req, res) => {
+app.get('/', (req, res) => { 
   // User.create({
   //   name: 'John Doe',
   //   birthday: new Date(),
