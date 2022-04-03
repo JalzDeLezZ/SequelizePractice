@@ -14,12 +14,13 @@ app.get('/', (req, res) => {
    res.json({"Hello": "World"})
 })
 app.use('/api/posts', require('./routes/post'))
+app.use('/api/users', require('./routes/users'))
 
 //>>>>>>>>>>>>>>>>>>>>SERVER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
 
-    sequelize.sync({force: false})
+    sequelize.sync({force: false})//<<<<<<<<<<<<
     .then(() => {
         console.log('Connection has been established successfully.');
     })
